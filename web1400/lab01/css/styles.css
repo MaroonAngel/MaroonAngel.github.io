@@ -1,0 +1,31 @@
+h1 {
+    font-family: "Comfortaa";
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+h2 {
+    font-family: "Comfortaa";
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 30px;    
+    color: maroon;
+}
+
+p {
+    font-family: "Dongle";
+    font-size: 25px;   
+    font-weight: 400;
+}
+
+body {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
