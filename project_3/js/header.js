@@ -1,6 +1,6 @@
 let siteHeader = `
     <nav>
-        <img id="logo" src="../images/movers_logo.png">
+        <img id="logo" src="images/movers_logo.png">
         <ul>
             <li id="nav-index"><a href="index.html">Home</a></li>
             <li id="nav-about"><a href="#">About</a></li>
@@ -13,7 +13,6 @@ let siteHeader = `
 `;
 
 document.getElementById("site-header").innerHTML = siteHeader;
-
 
 // Adds a little selector bar under the current page in nav
 
