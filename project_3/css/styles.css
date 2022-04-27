@@ -416,6 +416,69 @@ footer {
 /* ========> PRICING PAGE STYLES <======== */
 /* ===================================== */
 
+#pricing-hero {
+    height: 500px;
+    background-image: url("../images/pricing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#prices {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2em;
+}
+
+#pricing-fees #big-box {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#pricing-fees #big-box div {
+    width: 30%;
+}
+
+#pricing-fees ul {
+    list-style-type: none;
+}
+
+#pricing-fees #small-box {
+    width: 75%;
+    margin-top: 5em;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#pricing-fees #small-box div {
+    width: 40%;
+}
+
+#stress-free {
+    min-height: 500px;
+    background-image: url("../images/stress-free.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+}
+
+#stress-free div {
+    width: 40%;
+}
+
+#convenience {
+    list-style-position: inside;
+    margin-bottom: 2em;
+}
+
+#convenience h4 {
+    display: inline;
+}
+
 /* ===================================== */
 /* ========> CONTACT PAGE STYLES <======== */
 /* ===================================== */
@@ -696,5 +759,24 @@ footer {
     .form-group textarea,
     .form-group input {
         width: 90%;
+    }
+
+    #pricing-fees #big-box,
+    #pricing-fees #small-box {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 2em;
+    }
+
+    #big-box div,
+    #small-box div {
+        width: 90% !important;
+        margin-top: 2em !important;
+    }
+
+    #stress-free div {
+        width: 90%;
+        text-align: center;
     }
 }
