@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-    <head>
-        <title>Movers 123 TEMPLATE Page</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Jamie Spainhower 2022">
-        <meta name="description" content= "TEMPLATE DESCRIPTION">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Heebo:wght@600&family=Nunito&display=swap" rel="stylesheet">        
-    </head>
-    <body>
-        <header id="site-header">
-            <script defer src="js/header.js"></script>
-            <!-- filled by javascript using header template for all pages -->  
-        </header>
-        <main>            
-            <section id="contact-hero">                                    
-                <h1>Contact Us</h1>
-            </section>
-            <section id="contact-intro">
-                <h4>We are Utah's affordable, premier moving company offering service for both in-state and out-of-state moves.  The reason we succeed is because we offer impeccable service with a focus on taking care of YOU in your move—from start to end.  The reviews from the following reputable companies show our strong customer satisfaction ratings.</h4>
-                
-                <img id="icon" src="images/facebook-logo.svg">
-                <img id="icon" src="images/yelp_logo.png">
-                <img id="icon" src="images/facebook-logo.svg">
-            </section>
-            <section id="contact-specials">
-                <h3>Our Moving Specials</h3>
-                <h4>We have found that our best marketing is by word of mouth and testimonials.  A referral is our greatest compliment.  We want our customers 100% satisfied.  If you are not, let us make it right.</h4>
-                <div>
-                    <img id="icon" src="images/facebook-logo.svg">
-                    <img id="icon" src="images/facebook-logo.svg">
-                </div>                
-            </section>
-            <section id="contact-form">
-                <h2>Get a Free Quote</h2>
-                <form>
-                    <div class="form-group">
-                        <label name="fname" class="block_label">Full Name:</label>
-                        <input type="text" name="fname" id="fname" placeholder="Enter your full name">
+    <html>
+        <head>
+            <title>Movers 123 Contact</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="author" content="Jamie Spainhower 2022" />
+            <meta name="description" content="The contact page for Movers 123." />
+            <link rel="stylesheet" type="text/css" href="css/styles.css" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Heebo:wght@600&family=Nunito&display=swap" rel="stylesheet" />
+        </head>
+        <body>
+            <header id="site-header">
+                <script defer src="js/header.js"></script>
+                <!-- filled by javascript using header template for all pages -->
+            </header>
+            <main>
+                <section id="contact-hero">
+                    <h1>Contact Us</h1>
+                </section>
+                <section id="contact-intro">
+                    <h4>We are Utah's affordable, premier moving company offering service for both in-state and out-of-state moves. The reason we succeed is because we offer impeccable service with a focus on taking care of YOU in your move—from start to end. The reviews from the following reputable companies show our strong customer satisfaction ratings.</h4>
+                    <div id="contact-logos">
+                        <img id="icon" src="images/bbb-logo.png" />
+                        <img id="icon" src="images/yelp_logo.png" />
+                        <img id="icon" src="images/ksl_reviews_logo.png" />
                     </div>
-                    
-                    <div class="form-group">
-                        <label name="email" class="block_label">Your Email:</label>
-                        <input type="text" name="email" id="email" placeholder="Enter your email address">
+                </section>
+                <section id="contact-specials">
+                    <h3>Our Moving Specials</h3>
+                    <h4>We have found that our best marketing is by word of mouth and testimonials. A referral is our greatest compliment. We want our customers 100% satisfied. If you are not, let us make it right.</h4>
+                    <div>
+                        <img id="icon" src="images/facebook-logo.svg" />
+                        <img id="icon" src="images/facebook-logo.svg" />
                     </div>
-                    
-                    <div class="form-group">
-                        <p>What type of move will you need?</p>
-                        <select name="move-type" id="move-type">
-                            <option value="residential">Residential Move</option>
-                            <option value="commercial">Commercial/Office Move</option>
-                            <option value="distance">Long Distance Move</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <p>What is the size of your move?</p>
-                        <select name="move-size" id="move-size">
-                            <option value="studio">Studio</option>
-                            <option value="1bed">1 bedroom</option>
-                            <option value="2bed">2 bedrooms</option>
-                            <option value="3bed">3 bedrooms</option>
-                            <option value="4bed">4 bedrooms</option>
-                            <option value="comm-avg">Commercial (average size)</option>
-                            <option value="comm-large">Commercial (large, many items)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label name="pickup-zip" class="block_label">What is the zip code for your pick up location?</label>
-                        <input type="text" name="pickup-zip" id="pickup-zip" placeholder="Enter five-digit zip code">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label name="dropoff-zip" class="block_label">What is the zip code for your drop off location?</label>
-                        <input type="text" name="dropoff-zip" id="dropoff-zip" placeholder="Enter five-digit zip code">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label name="move-date" class="block_label">What is the date for your move?</label>
-                        <input type="date" name="move-date" id="move-date" placeholder="mm/dd/yyyy">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label name="fcomments" class="block_label">Tell us how we ccan help.</label>
-                        <textarea name="fcomments" id="fcomments" placeholder="Enter your message"></textarea>
-                    </div>
-                    
-                    <div class="form_group">
-                        <button type="submit" class="button">Send Message</button>
-                    </div>
-                </form>
-            </section>            
-        </main>
-        <footer id="site-footer">
-            <script defer src="js/footer.js"></script>
-            <!-- filled by javascript using footer template for all pages -->
-        </footer>
-    </body>
+                </section>
+                <section id="contact-form">
+                    <h2>Get a Free Quote</h2>
+                    <form>
+                        <div class="form-group">
+                            <label name="fname" class="block-label">Full Name:</label>
+                            <input type="text" name="fname" id="fname" placeholder="Enter your full name" />
+                        </div>
+
+                        <div class="form-group">
+                            <label name="email" class="block-label">Your Email:</label>
+                            <input type="text" name="email" id="email" placeholder="Enter your email address" />
+                        </div>
+
+                        <div class="form-group">
+                            <p class="block-label">What type of move will you need?</p>
+                            <select name="move-type" id="move-type">
+                                <option value="residential">Residential Move</option>
+                                <option value="commercial">Commercial/Office Move</option>
+                                <option value="distance">Long Distance Move</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="block-label">What is the size of your move?</p>
+                            <select name="move-size" id="move-size">
+                                <option value="studio">Studio</option>
+                                <option value="1bed">1 bedroom</option>
+                                <option value="2bed">2 bedrooms</option>
+                                <option value="3bed">3 bedrooms</option>
+                                <option value="4bed">4 bedrooms</option>
+                                <option value="comm-avg">Commercial (average size)</option>
+                                <option value="comm-large">Commercial (large, many items)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label name="pickup-zip" class="block-label">What is the zip code for your pick up location?</label>
+                            <input type="text" name="pickup-zip" id="pickup-zip" placeholder="Enter five-digit zip code" />
+                        </div>
+
+                        <div class="form-group">
+                            <label name="dropoff-zip" class="block-label">What is the zip code for your drop off location?</label>
+                            <input type="text" name="dropoff-zip" id="dropoff-zip" placeholder="Enter five-digit zip code" />
+                        </div>
+
+                        <div class="form-group">
+                            <label name="move-date" class="block-label">What is the date for your move?</label>
+                            <input type="date" name="move-date" id="move-date" placeholder="MM/DD/YYYY" />
+                        </div>
+
+                        <div class="form-group">
+                            <label name="fcomments" class="block-label">Tell us how we can help.</label>
+                            <textarea name="fcomments" id="fcomments" placeholder="Enter your message"></textarea>
+                        </div>
+
+                        <div class="form_group">
+                            <button type="submit" class="button">Send Message</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+            <footer id="site-footer">
+                <script defer src="js/footer.js"></script>
+                <!-- filled by javascript using footer template for all pages -->
+            </footer>
+        </body>
+    </html>
 </html>
