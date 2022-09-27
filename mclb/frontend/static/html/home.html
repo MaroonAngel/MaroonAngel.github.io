@@ -1,3 +1,12 @@
 <h1>Home</h1>
 <p>Welcome to the home page of Minecraft Log Browser!</p>
 
+<input type="button" id="btn_directory" value="Choose logs directory"></input>
+
+<script>
+    function LoadDirectory() {
+        console.log("You've loaded it!");
+    }
+
+    $("#btn_directory").on("click", LoadDirectory);
+</script>
