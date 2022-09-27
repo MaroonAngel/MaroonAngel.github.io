@@ -1,6 +1,8 @@
 import Home from "./views/Home.js";
 import Settings from "./views/settings.js";
 
+const defaultPath = "/mclb/frontend";
+
 const navigateTo = url => {
     history.pushState(null, null, url);
     router();
@@ -8,8 +10,8 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: Home },        
-        { path: "/settings", view: Settings }
+        { path: defaultPath + "/", view: Home },        
+        { path: defaultPath + "/settings", view: Settings }
     ];
 
     // Test each route for potential match
