@@ -1,12 +1,65 @@
 <h1>Home</h1>
 <p>Welcome to the home page of Minecraft Log Browser!</p>
 
-<input type="button" id="btn_directory" value="Choose logs directory"></input>
+<input type="button" id="btn_directory" value="Choose log directory"></input>
+<br/>
+<input type="text" id="searchbox" placeholder="Search">
 
-<script>
-    function LoadDirectory() {
+
+
+<table id="logTable"></table>
+<script type="text/javascript" src="/static/js/pako.min.js"></script>
+<script>   
+
+    var zipFiles = [];    
+
+    async function LoadDirectory() {
         console.log("You've loaded it!");
+        const logDirHandle = await window.showDirectoryPicker();
+        
+        for await (const entry of logDirHandle.values()) {
+            //console.log(entry.kind, entry.name);
+            $("#logTable").append("<tr><td>" + entry.name + "</td></tr>");
+            zipFiles.push(entry);
+        }
     }
 
+    async function UnpackLogs() {
+        let logs = [];
+        for await (const entry of zipFiles.values()) {
+            if (entry.name == "latest.log") continue;
+            const file = await entry.getFile();
+            const contents = await file.arrayBuffer();
+            const unzipped = await pako.ungzip(new Uint8Array(contents), {'to': 'string'});
+            logs.push(unzipped);
+        }
+        return logs;
+    }
+
+    async function Search(query) {
+        let logs = await UnpackLogs();
+        let resultCount = 0;
+        //console.log(logs);
+
+        for (const log of logs) {
+            //console.log(log);
+            for (const line of log.split("\r\n")) {
+                if (line.indexOf(query) !== -1) {
+                    console.log("Found in " + logs.indexOf(log) + ":")
+                    console.log(line);
+                    resultCount++;
+                }
+            }
+        }
+
+        console.log("Search complete. " + resultCount + " results found.");
+    }    
+
     $("#btn_directory").on("click", LoadDirectory);
+    $("#searchbox").on("keydown", (e) => {
+        if (e.key === "Enter") {
+            console.log("Searching for: " + $("#searchbox").val());
+            Search($("#searchbox").val());
+        }
+    });
 </script>
